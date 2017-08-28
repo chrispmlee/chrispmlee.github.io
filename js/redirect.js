@@ -28,7 +28,8 @@ window.onload = function() {
 
   var messages = [
     'Hey! I\'m Chris 👋',
-    'I recently graduated from Vanderbilt University,<br> with a degree in Computer Science. ',
+    'It appears you are on a mobile device, please visit my website on a tablet, laptop, or desktop computer for full functionality',
+    'Anyways, I recently graduated from Vanderbilt University,<br> with a degree in Computer Science. ',
     'I\'m dedicated to creating sleek minimalistic intuitive <br> designs, and am exploring graduate <br> schools in UX/HCI/HCDE. I hope <br> to one day design products professionally <br> to simplify and ease usage without sacrficing elegance.',
     'You can contact me at:<br> <a href="mailto:chrisptopher.p.lee@vanderbilt.edu">christopher.p.lee@vanderbilt.edu</a> or <br> <a>https://www.linkedin.com/in/chrispmlee/</a>',
     getCurrentTime(),
