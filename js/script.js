@@ -94,7 +94,7 @@ function aboutMe() {
     var loadingDuration = (message.replace(/<(?:.|\n)*?>/gm, '').length * typingSpeed) + 500;
     var elements = createBubbleElements(message, position);
     messagesEl.appendChild(elements.bubble);
-    messagesEl.appendChild(document.createElement('br'));
+   // messagesEl.appendChild(document.createElement('br'));
     var dimensions = getDimentions(elements);
     elements.bubble.style.width = '0rem';
     elements.bubble.style.height = dimensions.loading.h;
