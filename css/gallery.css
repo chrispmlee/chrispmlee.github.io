@@ -96,8 +96,8 @@ p a:hover {color:#eb5cf4;}
 .top_links{
 	font-size: 2em;
 	position: absolute;
-	top:50px;
-	right: 150px;
+	margin-top: .6em;
+	margin-left: 25em;
 }
 
 a {
