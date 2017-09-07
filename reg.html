@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="AR_Mirror" content="MASI Lab, Augmented reality, project">
+    <meta name="description" content="Christopher Lee's personal portfolio." />
+    <meta name="keywords" content="developer, designer, portfolio, css, javascript" />
+    <meta name="Christopher Lee" content="Personal Portfolio" />
+
+    <title>Portfolio - AR Mirror</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link rel="shortcut icon" href="CL.ico">
+    <link href="css/clean-blog.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Christopher Lee</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./resume.html">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./portfolio.html">Portfolio</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>Evaluation of  Five Image Registration Tools for Abdominal CT</h1>
+              <h2 class="subheading">Pitfalls and Opportunities with Soft Anatomy</h2>
+              <span class="meta">Team: Christopher. P. Lee, Zhoubing Xu, Ryan P. Burke, Rebeccah B. Baucom, Benjamin K. Poulose, Richard G. Abramson, Bennett A. Landman</span>
+              <span class="meta">MASI Lab - Vanderbilt University, Nashville, TN</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+          	<h2 class="section-heading"> Introduction</h2>
+            <p>Image registration has become an essential image processing technique to compare data across time and individuals. With the successes in volumetric brain registration, general-purpose software tools are beginning to be applied to abdominal computed tomography (CT) scans. My work explored the uses of five image registration tools on abdominal CT scans. I presented a poster at the Vanderbilt undergraduate research symposium, and published my paper in the SPIE Conference 2015 in Orlando, Florida. Furthermore, I was designated an oral presentation at the SPIE Conference. This page is a surface level overview of the research conducted. For an in depth read, links can be found to the paper and poster at the bottom of page.</p>
+
+            <!-- group image -->
+            <img class="img-fluid" src="img/reg/group.png" alt="group pic" style="padding-top: 15px">
+             <span class="caption text-muted">Masi Lab - Summer 2014</span>
+
+            <h2 class="section-heading">Purpose</h2>
+              <p>The main purpose of my research:</p>
+               <ul>
+               	<li>To analyze the performance of five state-of-the-art image registration tools  on 20 abdominal CT scans using default parameters
+</li>
+               	<li>Establish baseline performance with state-of-the-art image registration tools for development
+</li>
+               </ul>
+
+         	 </p>
+
+            <h2 class="section-heading">Data Set</h2>
+            <p> The data used in the study consisted of 20 patients randomly selected from a 100 person data set with hernias and colorectal cancer. The CT scans were cropped to include 12 organs of interest: the spleen, right kidney, left kidney, gallbladder, esophagus, liver, stomach, aorta, inferior vena cava, protal vein and splenic vein, pancreas, and adrenal glands. The CT scans used as the point of truth were labeled by two experienced undergraduates and verified by a radiologist.</p>
+
+             <img class="img-fluid" src="img/reg/organs.png" alt="organs of interest" style="padding-top: 15px; padding-left: 10%; height: 12%; padding-bottom: 10px;">
+             <span class="caption text-muted">The organs of interest and hernias (top right) and colorectal cancer (bottom right)</span>
+
+            <h2 class="section-heading">Proposed Method</h2>
+            <p> As illustrated below, for each target image among the 20 scans, the remaining 19 atlases were used as source images to the target image in a pair-wise manner, thus 380 sets of output were generated. For each pair of the atlas and target, the registration was first driven by the dissimilarity metrics between their intensity images. The associated atlas label was then propagated to the target space with nearest neighbor interpolation as the estimate of the target structures based upon the transformation/deformation generated from the intensity-driven registration. In the end, the registered labels on the twelve ROIs were validated against the manual segmentation as the evaluation of the registration results. For all software packages, we used the default parameters of the registration tools except as noted in the paper<p>
+
+            <img class="img-fluid" src="img/reg/method.JPG" alt="method" style="padding-top: 15px;">
+
+            <h2 class="section-heading">Results</h2>
+
+            <img class="img-fluid" src="img/reg/example.JPG" alt="example" style="padding-top: 15px;">
+            <img class="img-fluid" src="img/reg/top_1_top_5.JPG" alt="average" style="padding-top: 15px;">
+            <span class="caption text-muted">The average of all organs top 1 and top 5 registrations DSC</span>
+            
+            <h2 class="section-heading">Conclusion</h2>
+
+            <img class="img-fluid" src="img/reg/first.JPG" alt="organs of interest" style="padding-top: 15px;">
+            <span class="caption text-muted">The top performing registration from each of the programs</span>
+     
+
+            <p>Project Links:
+              <a href="https://www.nitrc.org/projects/ar_mirror/">Poster</a> 
+              <a href="https://my.vanderbilt.edu/masi/">| Paper |</a>
+              <a href="https://my.vanderbilt.edu/masi/">| MASI Lab</a></p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+
+  </body>
+
+</html>
