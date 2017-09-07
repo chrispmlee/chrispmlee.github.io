@@ -5,21 +5,24 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="AR_Mirror" content="MASI Lab, Augmented reality, project">
+    <meta name="description" content="Christopher Lee's personal portfolio." />
+    <meta name="keywords" content="developer, designer, portfolio, css, javascript" />
+    <meta name="Christopher Lee" content="Personal Portfolio" />
 
-    <title>Clean Blog - Start Bootstrap Theme</title>
+    <title>Portfolio - AR Mirror</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
-    <link href="css/clean-blog.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="CL.ico">
+    <link href="css/clean-blog.css" rel="stylesheet">
 
   </head>
 
@@ -28,7 +31,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+        <a class="navbar-brand" href="index.html">Christopher Lee</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -36,16 +39,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="./index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="./resume.html">Resume</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="post.html">Sample Post</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="./portfolio.html">Portfolio</a>
             </li>
           </ul>
         </div>
@@ -58,11 +58,10 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="post-heading">
-              <h1>Man must explore, and this is exploration at its greatest</h1>
-              <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
-              <span class="meta">Posted by
-                <a href="#">Start Bootstrap</a>
-                on August 24, 2017</span>
+              <h1>A Medical Information Visualization Game Based on XBOX Kinect v2 </h1>
+              <h2 class="subheading">A cost-effective teaching tool for classrooms</h2>
+              <span class="meta">Team: Chris Lee, Yuang Yao, Remilia Li, Sharo Hawrami, Bennett Landman</span>
+              <span class="meta">MASI Lab - Vanderbilt University, Nashville, TN</span>
             </div>
           </div>
         </div>
@@ -74,42 +73,88 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
+          	<h2 class="section-heading"> Introduction</h2>
+            <p>The Augmented Reality Mirror is an open source rendering software to provide users with a virtual reality experience. With the provisions of a projection display, a laptop with multi-core GPU, and XBOX kinect v2, users can stand in front of the mirror and representative anatomical images will overlay the body. The images implemented are adapted to approximate the actual anatomy. The open source software will have an application programming interface (API) to allow users to develop additional content within the Augmented Reality Mirror</p>
 
-            <p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
+            <!-- group image -->
+            <img class="img-fluid" src="img/ar_mirror/group.jpg" alt="data-streams" style="padding-top: 15px">
+             <span class="caption text-muted">From left to right: Sharo Hawrami, Chris Lee, Yuang Yao, Remilia Li</span>
 
-            <p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
+            <h2 class="section-heading">Design</h2>
+              <p>Throughout the year I worked on this project, I worked with setting up the physical architecture of the Augmented Reality Mirror, testing the capabilities of the kinect v2, and constructing a calibration system and simple abdominal organ game. Since my team was laying the foundation for the AR mirror, it was imperative that the design of the physical architecture was intuitive, simple, and performed as much like a mirror as possible. As for the software, we tested the kinects five data streams that arrived through the kinect's three sensors: IR sensor, depth sensor, and RGB camera. From this we were able to design and build a simple game. 
 
-            <p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
+              <!-- Insert image of kinect data stream -->
+              <img class="img-fluid" src="img/ar_mirror/datastreams.JPG" alt="data-streams" style="padding-top: 15px">
+              <span class="caption text-muted">The five kinect data streams from the kinect's three sensors: IR sensor, depth sensor, and RGB camera.</span>
 
-            <p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>
+              <h5>Design Requirements</h5>
+              <ul>
+              	<li>1980x1080 projector</li>
+              	<ul>
+              		<li>High quality image display</li>
+              	</ul>
+              	<li>Rear projection screen</li>
+              	<ul>
+              		<li>Creates illusion of a mirror</li>
+              	</ul>
+              	<li>PC with following specifications</li>
+              	<ul>
+              		<li>Multicore Central Processing Unit (CPU) </li>
+              		<li>Multicore Graphical Processing Unit (GPU) </li>
+              		<li>x64 System </li>
+              		<li>4+ gigabytes of Random Acess Memory (RAM) </li>
+              	</ul>
+			  </ul>
 
-            <h2 class="section-heading">The Final Frontier</h2>
+         	 </p>
 
-            <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+            <h2 class="section-heading">Physical Configuration</h2>
+            <p> While working to design the best set up for the augmented reality mirror, we ran into many constraints. Constraints included mimimizing the total area of the configuration, a configuration that could work for people of all sizes, and in a way that the hardware could work in conjunction with the sotware, all while creating the most realisitc experience. </p>
 
-            <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+             <img class="img-fluid" src="img/ar_mirror/finalconfiguration.JPG" alt="ar_mirror" style="padding-top: 15px; padding-left: 18%;">
+             <span class="caption text-muted">The final configuration of the augmented reality mirror.</span>
 
-            <blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
 
-            <p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
+             <h5>System configuration</h5>
+              <ul>
+              	<li>1980x1080 projector</li>
+              	<ul>
+              		<li>11ft behind rear project screen</li>
+              		<li>Placed on side to change dimensions to 1080x1980</li>
+              	</ul>
+              	<li>Rear projection screen</li>
+              	<ul>
+              		<li>Placed on side giving the screen dimensions of 56inx96in</li>
+              	</ul>
+              	<li>Kinect v2</li>
+              	<ul>
+              		<li>1ft from the right side of the screen</li>
+              		<li>9in in front of th screen</li>
+              		<li>54in off the ground</li>
+              	</ul>
 
-            <h2 class="section-heading">Reaching for the Stars</h2>
+			  </ul>
 
-            <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
+            <h2 class="section-heading">Software</h2>
 
-            <a href="#">
-              <img class="img-fluid" src="img/post-sample-image.jpg" alt="">
-            </a>
-            <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+            <p> The software written was in C# and XML, and can be found at the link at the bottom of the page. We initally explored the manipulation of the different data streams, and then created a basic game and system calibration. The software life cycle required us to modify the display to the constraints of the sideways projector. </p>
 
-            <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
+            <img class="img-fluid" src="img/ar_mirror/software.JPG" alt="ar_mirror" style="padding-top: 15px;">
+            <span class="caption text-muted">The software cycle</span>
 
-            <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
+            <!-- Video -->
+            <iframe src="https://player.vimeo.com/video/134631019" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			<span class="caption text-muted"><a href="https://vimeo.com/134631019">MASI - Augmented Reality Mirror: Calibration &amp; Game</a></span>
+          
+            <img class="img-fluid" src="img/post-sample-image.jpg" alt="">
+           
+            
 
-            <p>Placeholder text by
-              <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by
-              <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
+     
+
+            <p>Project Links:
+              <a href="https://www.nitrc.org/projects/ar_mirror/">AR Mirror</a> 
+              <a href="https://my.vanderbilt.edu/masi/">| MASI Lab</a></p>
           </div>
         </div>
       </div>
@@ -120,9 +165,9 @@
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- Custom scripts for this template -->
     <script src="js/clean-blog.min.js"></script>
