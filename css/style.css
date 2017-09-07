@@ -168,8 +168,8 @@ a:hover {
   background-position: bottom center;
 }
 .content_bottom{
-  z-index: -10;
+  z-index: 10;
   position:absolute;
   height: 100vh;
-  margin-top: -22%;
+  margin-top: -24%;
 }
