@@ -4,9 +4,9 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-clean-blog/blob/master/LICENSE)
  */
 body {
-  font-size: 20px;
+  font-size: 17px;
   color: #333333;
-  font-family: 'Lora', 'Times New Roman', serif; }
+  font-family: Tahoma, Verdana, Segoe, sans-serif; }
 
 p {
   line-height: 1.5;
