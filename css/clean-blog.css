@@ -5,7 +5,7 @@
  */
 body {
   font-size: 17px;
-  color: #333333;
+  color: #000000;
   font-family: Tahoma, Verdana, Segoe, sans-serif; }
 
 p {
@@ -147,7 +147,7 @@ body {
 header.masthead {
   margin-bottom: 50px;
   background: no-repeat center center;
-  background-color: #123;
+  background-color: #000000;
   background-attachment: scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
