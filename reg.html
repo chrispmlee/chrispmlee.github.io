@@ -74,10 +74,10 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
           	<h2 class="section-heading"> Introduction</h2>
-            <p>Image registration has become an essential image processing technique to compare data across time and individuals. With the successes in volumetric brain registration, general-purpose software tools are beginning to be applied to abdominal computed tomography (CT) scans. My work explored the uses of five image registration tools on abdominal CT scans. I presented a poster at the Vanderbilt undergraduate research symposium, and published my paper in the SPIE Conference 2015 in Orlando, Florida. Furthermore, I was designated an oral presentation at the SPIE Conference. This page is a surface level overview of the research conducted. For an in-depth read, links can be found to the paper and poster at the bottom of page.</p>
+            <p>Image registration has become an essential image processing technique to compare data across time and individuals. With the successes in volumetric brain registration, general-purpose software tools are beginning to be applied to abdominal computed tomography (CT) scans. My work explored the uses of five image registration tools on abdominal CT scans. I presented a poster at the Vanderbilt undergraduate research symposium, and published my paper in the SPIE Conference 2015 in Orlando, Florida. Furthermore, I was designated an oral presentation at the SPIE Conference. This page is a surface level overview of the research conducted. For an in-depth read, links can be found to the paper, poster and presentation slides at the bottom of page.</p>
 
             <!-- group image -->
-            <img class="img-fluid" src="img/reg/group.png" alt="group pic" style="padding-top: 15px">
+            <img class="img-fluid" src="img/reg/group.jpg" alt="group pic" style="padding-top: 15px">
              <span class="caption text-muted">Masi Lab - Summer 2014</span>
 
             <h2 class="section-heading">Purpose</h2>
@@ -94,29 +94,39 @@
             <h2 class="section-heading">Data Set</h2>
             <p> The data used in the study consisted of 20 patients randomly selected from a 100 person data set with hernias and colorectal cancer. The CT scans were cropped to include 12 organs of interest: the spleen, right kidney, left kidney, gallbladder, esophagus, liver, stomach, aorta, inferior vena cava, protal vein and splenic vein, pancreas, and adrenal glands. The CT scans used as the point of truth were labeled by two experienced undergraduates and verified by a radiologist.</p>
 
-             <img class="img-fluid" src="img/reg/organs.png" alt="organs of interest" style="padding-top: 15px; padding-left: 10%; height: 12%; padding-bottom: 10px;">
+             <img class="img-fluid" src="img/reg/organs.jpg" alt="organs of interest" style="padding-top: 15px; padding-left: 10%; height: 12%; padding-bottom: 10px;">
              <span class="caption text-muted">The organs of interest and hernias (top right) and colorectal cancer (bottom right)</span>
 
             <h2 class="section-heading">Proposed Method</h2>
-            <p> As illustrated below, for each target image among the 20 scans, the remaining 19 atlases were used as source images to the target image in a pair-wise manner, thus 380 sets of output were generated. For each pair of the atlas and target, the registration was first driven by the dissimilarity metrics between their intensity images. The associated atlas label was then propagated to the target space with nearest neighbor interpolation as the estimate of the target structures based upon the transformation/deformation generated from the intensity-driven registration. In the end, the registered labels on the twelve ROIs were validated against the manual segmentation as the evaluation of the registration results. For all software packages, we used the default parameters of the registration tools except as noted in the paper<p>
+            <p> As illustrated below, for each target image among the 20 scans, the remaining 19 atlases were used as source images to the target image in a pair-wise manner, thus 380 sets of output were generated. For each pair of the atlas and target, the registration was first driven by the dissimilarity metrics between their intensity images. The associated atlas label was then propagated to the target space with nearest neighbor interpolation as the estimate of the target structures based upon the transformation/deformation generated from the intensity-driven registration. In the end, the registered labels on the twelve ROIs were validated against the manual segmentation as the evaluation of the registration results. For all software packages, we used the default parameters of the registration tools except as noted in the paper</p>
 
-            <img class="img-fluid" src="img/reg/method.JPG" alt="method" style="padding-top: 15px;">
-
+            <img class="img-fluid" src="img/reg/method.JPG" alt="method image" style="padding-top: 15px;">
+            <span class="caption text-muted">Atlases were affine registered, and then evaluated using a non-rigid registration method</span>
+           
             <h2 class="section-heading">Results</h2>
 
-            <img class="img-fluid" src="img/reg/example.JPG" alt="example" style="padding-top: 15px;">
+            <p>Four of the registration tools produced 380 pairwise registered labels. FNIRT had two atlases that failed without producing output and only produced 378. We first established the metrics on each of the registration tool’s raw data using DSC, MSD, and HD on each organ, by comparing the registered labels with the manually segmented labels as the ground truth. As demonstrated by the DSC values [illustrated in paper] for each organ, it becomes immediately apparent that the smaller organs have much smaller values and the larger organs have larger values. This is surely caused by the fact that larger organs have more surface area, and therefore have a greater probability of overlap. Due to each registration creating outliers and skewing the raw results, it became imperative to evaluate the results that were not catastrophic failures. Below are examples of the scale of good to ugly. The majority of our results were ugly.</p>
+
+            <img class="img-fluid" src="img/reg/example.JPG" alt="example image" style="padding-top: 15px;">
+            <span class="caption text-muted">Example of what qualifies as good, bad, and ugly registration</span>
+
+            <p>To evaluate the better-performing results, we averaged the DSC values of all the organs for each atlas and selected the top 1 and 5 atlases as shown below. By averaging the organs, we can understand how the registration tools are performing in general for “successful” cases that may be selected by an atlas selection procedure. By using retrospective analysis, the results clearly serve as an upper bound on average registration performances considering only “successes.” The cleaner interpretation of the results, fortifies the conclusion drawn on the raw DSC results; non-rigid IRTK, Nifty and ANTs perform better than affine IRTK and FNIRT.</p>
+
             <img class="img-fluid" src="img/reg/top_1_top_5.JPG" alt="average" style="padding-top: 15px;">
             <span class="caption text-muted">The average of all organs top 1 and top 5 registrations DSC</span>
             
             <h2 class="section-heading">Conclusion</h2>
 
-            <img class="img-fluid" src="img/reg/first.JPG" alt="organs of interest" style="padding-top: 15px;">
-            <span class="caption text-muted">The top performing registration from each of the programs</span>
+            <p>We analyzed 5 different general-purpose image registration tools and apply them to abdominal CT scans. We use one linear registration tool, affine IRTK, and four non-linear registration tools, FNIRT, NiftyReg, non-rigid IRTK, and ANTs. In general, we used the default parameters in our registrations and believe that the registrations may improve with further inspection on parameter selection. However, the results of our experiment outline that affine IRTK and FNIRT produce worse registrations than non-rigid IRTK, NiftyReg and ANTs. Furthermore, it became apparent that every registration tool produced catastrophic failures. These catastrophic failures detracted from the well-registered atlases. When applying these image registrations tools for local interpretation of abdominal CT scans, great care must be taken to account for outlier (e.g., atlas selection in statistical fusion). With the current tools, registrations of abdominal CTs are too erroneous and sporadic to be implemented in clinical use. Development and innovation in the field of image registration for abdominal CT scans are critical to reduce outliers, maintain registration consistency and improve organ identification and segmentation.</p>
+
+            <img class="img-fluid" src="img/reg/first.JPG" alt="top performing image" style="padding-top: 15px;">
+            <span class="caption text-muted">The top performing registrations from each of the programs</span>
      
 
             <p>Project Links:
-              <a href="https://www.nitrc.org/projects/ar_mirror/">Poster</a> 
-              <a href="https://my.vanderbilt.edu/masi/">| Paper |</a>
+              <a href="https://www.dropbox.com/s/ctbmv4aaeo6v6wa/PosterChris.pptx?dl=0">Poster</a> 
+              <a href="https://www.dropbox.com/s/s9tbfo25r6cp7jc/MASI_Chris_SPIE2015_1.pptx?dl=0">| Presentation |</a>
+              <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4405654/"> Paper </a>
               <a href="https://my.vanderbilt.edu/masi/">| MASI Lab</a></p>
           </div>
         </div>
