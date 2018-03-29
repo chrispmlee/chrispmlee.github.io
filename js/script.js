@@ -37,7 +37,7 @@ function aboutMe() {
   var messages = [
     'Hey! I\'m Chris 👋',
     'I recently graduated from Vanderbilt University,<br> with a degree in Computer Science.',
-    'I want to make impact by connecting people through design, computer science, and business.',
+    'I want to make impact by connecting people through design, <br> computer science, and business.',
     'This website was built from scratch. Please let me know <br> if you find any bugs! You can contact me at:<br> <a href="mailto:chrisptopher.p.lee@vanderbilt.edu">christopher.p.lee@vanderbilt.edu</a> or <br> <a>https://www.linkedin.com/in/chrispmlee/</a>',
     getCurrentTime(),
     'Best, CL [:'
